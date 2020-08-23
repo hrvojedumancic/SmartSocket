@@ -42,11 +42,12 @@ void printResult(StreamData &data);
 
 void streamCallback(StreamData data)
 {
+  Serial.println(data.dataType());
+  
   if (data.dataType() == "boolean") {
-      controlBooleanData(data);// BRANCH BOOLEAN
+      controlBooleanData(data);
   } else if (data.dataType() == "json") {
       controlJsonData(data);
-      // BRANCH JSON
   } else {
     Serial.print("Unsupported data format: ");
     Serial.println(data.dataType());
@@ -146,9 +147,9 @@ void decodeSwitchControl(StreamData &data) {
 
 void controlSwitch(bool value) {
   if (value) {
-      digitalWrite(SWITCH_PIN, HIGH);
-  } else {
       digitalWrite(SWITCH_PIN, LOW);
+  } else {
+      digitalWrite(SWITCH_PIN, HIGH);
   }
 }
 
