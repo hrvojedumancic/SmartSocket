@@ -1,0 +1,28 @@
+﻿[
+  {
+    "id": "1",
+    "type": "action.devices.types.SWITCH",
+    "traits": [
+      "action.devices.traits.OnOff"
+    ],
+    "name": {
+      "defaultNames": [
+        "Smart socket"
+      ],
+      "name": "Smart socket",
+      "nicknames": [
+        "Smart socket"
+      ]
+    },
+    "deviceInfo": {
+      "manufacturer": "Hrvoje Dumancic FOI",
+      "model": "Smart socket v1.0",
+      "hwVersion": "6.0",
+      "swVersion": "7.0.1"
+    },
+    "willReportState": true,
+    "attributes": {
+      "commandOnlyOnOff": false
+    }
+  }
+]
